@@ -374,13 +374,33 @@ footer{margin-top:90px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1
         <div class="tags"><span>LangChain</span><span>Llama 3.2</span><span>ChromaDB</span><span>MLflow</span><span>Streamlit</span></div>
       </article>
       <article class="proj reveal">
-        <div class="result">4-class<small>brain tumor MRI classification</small></div>
-        <h3>Clinical Neuro-Imaging AI Pipeline</h3>
+        <div class="result">91.3% F1<small>99.85% ROC-AUC</small></div>
+        <h3>Real-Time Fraud Detection Pipeline</h3>
         <ul>
-          <li>DICOM/PACS inference workflow with tag-based routing and synthetic FHIR R4 patient context.</li>
-          <li>Fine-tuned ResNet-50 on 2,870 MRI images to 74.37% validation accuracy on an NVIDIA A100 via SLURM.</li>
+          <li>Cloud-native pipeline on Azure Event Hubs → Databricks → Delta Lake with ACID-compliant storage and micro-batch scoring at 60-second intervals.</li>
+          <li>PySpark window-function features (1h/24h rolling aggregations); XGBoost with temporal train/test split and <strong>scale_pos_weight</strong> for 7.75% fraud rate.</li>
+          <li>MLflow model registry via Unity Catalog; Databricks SQL dashboard tracking precision, recall and fraud pattern distributions.</li>
         </ul>
-        <div class="tags"><span>PyTorch</span><span>ResNet-50</span><span>DICOM</span><span>FHIR R4</span><span>Orthanc</span><span>Docker</span></div>
+        <div class="tags"><span>XGBoost</span><span>PySpark</span><span>Azure Event Hubs</span><span>Databricks</span><span>Delta Lake</span><span>MLflow</span></div>
+      </article>
+      <article class="proj reveal">
+        <div class="result">500K+<small>daily events ingested end-to-end</small></div>
+        <h3>E-Commerce Data Warehouse</h3>
+        <ul>
+          <li>Full AWS pipeline: Kinesis Firehose → S3 → Glue PySpark ETL → Redshift star schema with 4 fact tables and 8 dimensions, orchestrated by Airflow.</li>
+          <li>Kimball dimensional modeling with distribution/sort key optimization, 3-sigma revenue anomaly detection, and 12 KPI dashboard queries.</li>
+        </ul>
+        <div class="tags"><span>PySpark</span><span>AWS Glue</span><span>Redshift</span><span>Kinesis</span><span>S3</span><span>Airflow</span><span>Parquet</span></div>
+      </article>
+      <article class="proj reveal">
+        <div class="result">R² 0.79<small>RUL prediction · 100 engines</small></div>
+        <h3>Predictive Maintenance IoT Pipeline</h3>
+        <ul>
+          <li>IoT data ingestion from Azure IoT Hub through Data Lake Gen2 to Databricks, with medallion architecture and automated message routing.</li>
+          <li>PySpark rolling-window feature engineering on 20K+ sensor readings; model registered in Unity Catalog with MLflow signatures.</li>
+          <li>Flask inference API with maintenance scheduling and a real-time monitoring dashboard.</li>
+        </ul>
+        <div class="tags"><span>PySpark</span><span>Azure IoT Hub</span><span>Databricks</span><span>MLflow</span><span>Flask</span></div>
       </article>
     </div>
 
@@ -388,6 +408,7 @@ footer{margin-top:90px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1
       <h3>More projects</h3>
       <div class="more-list">
         <div class="more-item"><b>Algorithmic Trading Signal Platform</b><p>71 cross-sectional features from 8 years of OHLCV data; XGBoost ranking with walk-forward splits and +11.2% annualized alpha in quintile analysis.</p></div>
+        <div class="more-item"><b>Clinical Neuro-Imaging AI Pipeline</b><p>DICOM/PACS inference workflow with FHIR R4 patient context; fine-tuned ResNet-50 on 2,870 MRI images for 4-class brain tumor classification (74.37% accuracy) on an NVIDIA A100.</p></div>
         <div class="more-item"><b>Developer Skills Ecosystem Analysis</b><p>15,320 Stack Overflow responses and 303 GitHub profiles with NetworkX, LDA and Random Forest; 81.5% role-prediction accuracy.</p></div>
         <div class="more-item"><b>Sales &amp; Revenue Analytics</b><p>10+ interactive Tableau dashboards over 156 weeks of sales data, surfacing seasonal and regional patterns.</p></div>
         <div class="more-item"><b>Semantic Segmentation of Brain Tumor</b><p>TensorFlow/Keras segmentation model trained on 2,000+ multimodal 3D medical images.</p></div>
