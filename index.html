@@ -224,7 +224,7 @@ footer{margin-top:90px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1
       <p class="hello enter">Hi, I'm</p>
       <h1 class="enter"><span>Krishna Kishore</span><span class="surname">Madathingal</span></h1>
       <p class="role enter">Data Scientist &amp; Data Engineer</p>
-      <p class="lede enter">I build models that find connections in messy data — graph recommenders that match funders with nonprofits, forecasting systems that serve in milliseconds, and pipelines that turn raw brain scans into research-ready datasets.</p>
+      <p class="lede enter">I build models and the infrastructure they run on: graph recommenders that match funders with nonprofits, forecasting systems that serve predictions in milliseconds, and scalable pipelines that move data from ingestion to production.</p>
       <div class="cta enter">
         <a class="btn btn-solid" href="#projects">See my work</a>
         <a class="btn btn-ghost" href="mailto:madathingalkrishna@gmail.com">Email me</a>
@@ -242,12 +242,13 @@ footer{margin-top:90px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1
   <div class="wrap">
     <div class="head reveal">
       <h2>About</h2>
-      <p>Machine learning, data engineering and applied AI — from the first profiling pass to a model in production.</p>
+      <p><p>Machine learning, data engineering and applied AI, from the first profiling pass to a model serving in production.</p></p>
     </div>
     <div class="about-grid">
       <div class="about-text reveal">
-        <p>I'm a data scientist who likes the whole arc of a problem: understanding the data, engineering features that mean something, and shipping models people can trust.</p>
-        <p>My work spans recommendation systems, time-series forecasting, predictive modeling and RAG/LLM applications. Day to day I work in Python and SQL with PyTorch, XGBoost, LightGBM and scikit-learn, and I build the plumbing around models too — PySpark, Airflow, Kafka, MLflow, FastAPI, Docker and PostgreSQL. I've also spent time in healthcare data, working with DICOM, FHIR R4 and BIDS-compliant neuroimaging datasets.</p>
+        <p>I'm a data scientist and data engineer who works across the full arc of a problem: profiling raw data, building the pipelines that clean and move it, engineering features that mean something, and shipping models people can trust.</p>
+        <p>My work spans recommendation systems, time-series forecasting, predictive modeling and RAG/LLM applications on the modeling side, and ETL pipelines, streaming architectures and warehouse design on the engineering side.</p>
+        <p>Day to day I work in Python and SQL with PyTorch, XGBoost, LightGBM and scikit-learn, and I build the plumbing around models too — PySpark, Airflow, Kafka, MLflow, FastAPI, Docker and PostgreSQL. I've also spent time in healthcare data, working with DICOM, FHIR R4 and BIDS-compliant neuroimaging datasets.</p>
       </div>
       <aside class="facts reveal">
         <div>
@@ -364,6 +365,15 @@ footer{margin-top:90px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1
         </ul>
         <div class="tags"><span>LightGBM</span><span>dbt</span><span>PostgreSQL</span><span>FastAPI</span><span>MLflow</span></div>
       </article>
+       <article class="proj reveal">
+        <div class="result">500K+<small>daily events ingested end-to-end</small></div>
+        <h3>E-Commerce Data Warehouse</h3>
+        <ul>
+          <li>Full AWS pipeline: Kinesis Firehose → S3 → Glue PySpark ETL → Redshift star schema with 4 fact tables and 8 dimensions, orchestrated by Airflow.</li>
+          <li>Kimball dimensional modeling with distribution/sort key optimization, 3-sigma revenue anomaly detection, and 12 KPI dashboard queries.</li>
+        </ul>
+        <div class="tags"><span>PySpark</span><span>AWS Glue</span><span>Redshift</span><span>Kinesis</span><span>S3</span><span>Airflow</span><span>Parquet</span></div>
+      </article>
       <article class="proj reveal">
         <div class="result">510<small>legal contracts in a RAG pipeline</small></div>
         <h3>ContractSense: LLM Evaluation &amp; Simulation</h3>
@@ -382,15 +392,6 @@ footer{margin-top:90px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1
           <li>MLflow model registry via Unity Catalog; Databricks SQL dashboard tracking precision, recall and fraud pattern distributions.</li>
         </ul>
         <div class="tags"><span>XGBoost</span><span>PySpark</span><span>Azure Event Hubs</span><span>Databricks</span><span>Delta Lake</span><span>MLflow</span></div>
-      </article>
-      <article class="proj reveal">
-        <div class="result">500K+<small>daily events ingested end-to-end</small></div>
-        <h3>E-Commerce Data Warehouse</h3>
-        <ul>
-          <li>Full AWS pipeline: Kinesis Firehose → S3 → Glue PySpark ETL → Redshift star schema with 4 fact tables and 8 dimensions, orchestrated by Airflow.</li>
-          <li>Kimball dimensional modeling with distribution/sort key optimization, 3-sigma revenue anomaly detection, and 12 KPI dashboard queries.</li>
-        </ul>
-        <div class="tags"><span>PySpark</span><span>AWS Glue</span><span>Redshift</span><span>Kinesis</span><span>S3</span><span>Airflow</span><span>Parquet</span></div>
       </article>
       <article class="proj reveal">
         <div class="result">R² 0.79<small>RUL prediction · 100 engines</small></div>
